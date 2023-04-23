@@ -1,0 +1,34 @@
+Package: ensemble 
+Title: Bagging and Stacking Ensemble Learning 
+Version: 1.0.0.0
+Authors@R: 
+    person("Satish", "Narale", , "satish_narale@yahoo.co.in", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: This package has two techniques of ensemble learning implemented 
+  namely, Bagging and Stacking.
+  Stacking******* function takes 1) dataset, 2) Split ratio, 3) Response variable as arguments 
+  It uses SVM, Decision tree and Logistic Regression as base learners for stacking 
+  For meta model training it uses Random Forest 
+  This function returns confusion matrix 
+  Note:- please not that response variable should have factor levels or else SVM will not work 
+  Bagging******** function takes 1) dataset, 2) Split ratio,3) Number of samples on which models to be train, 4) Response variable as arguments, 5) Numbers of trees to train 
+  It functions takes out samples from the dataset provided as per the Learner number passed in the argument  
+  Each sample will be train using Random Forest with number of trees passed in argument 
+  This function returns Average Accuracy. 
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Imports:
+	caret,
+  e1071,
+  rpart,
+  randomForest,
+  nnet,
+  tidyverse,
+  randomForest
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
